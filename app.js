@@ -99,7 +99,7 @@ postForm.addEventListener('submit', async (event) => {
 
     const createdPost = await response.json();
     postsList.prepend(renderPost(createdPost));
-    showMessage(`Публикация «${createdPost.title}» успешно создана. ID: ${createdPost.id}.`, 'success');
+    showMessage(`Публикация «${createdPost.title}» успешно создана. ID: ${createdPost.id}. HTTP : 201 (Created)`, 'success');
     postForm.reset();
   } catch (error) {
     showMessage(`Не удалось создать публикацию: ${error.message}. Попробуйте ещё раз.`, 'error');
